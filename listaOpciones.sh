@@ -5,7 +5,7 @@ select value in "${APP_LOGPATHS[@]}" "Quit"; do
     "Quit" )
       echo -e "Opción QUIT seleccionada" && exit 1
       ;;
-    (*[0-9]*)
+      *)
       APP_LOGPATH=$(echo -e $value)   
       echo -e " El FS elegido es $APP_LOGPATH" && exit 0
       ;;
